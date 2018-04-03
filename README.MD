@@ -1,72 +1,71 @@
 # ngx-scroll-indicator
 
 ## Installation
+Angular Scroll Indicator
+====
 
-To install this library, run:
+Angular Component to add scroll indicator.
+
+Live Demo : https://mraghuram3.github.io/#/ngx-scroll-indicator
+
+
+## Installation
+
+Install it with npm
 
 ```bash
 $ npm install ngx-scroll-indicator --save
 ```
 
-## Consuming your library
+## Usage
 
-Once you have published your library to npm, you can import your library in any Angular application by running:
+Import `NgScrollIndicatorModule` in the root module
 
-```bash
-$ npm install ngx-scroll-indicator
-```
-
-and then from your Angular `AppModule`:
-
-```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-
-// Import your library
-import { SampleModule } from 'ngx-scroll-indicator';
+```ts
+import { NgScrollIndicatorModule } from 'ngx-text-highlight';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule,
-
-    // Specify your library as an import
-    LibraryModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    // ...
+    NgScrollIndicatorModule.forRoot(),
+    ...
+  ]
 })
-export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+In your template
 
-```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+```html
+<ng-scroll-indicator-component [container]="'container'" [progressbar]="'bar'"></ng-scroll-indicator-component>
+<div ngScrollDirective style="height:500px;overflow:scroll;">
+  ....
+  ....
+</div>
 ```
 
-## Development
+- **[container]**: string.
 
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
+  The css class name to be apllied to the container to modift the default style. Define the css class in main style sheet of the application
 
-```bash
-$ npm run build
-```
+- **[progressbar]**: string.
 
-To lint all `*.ts` files:
+  The css class name to be apllied to the container to modift the default style. Define the css class in main style sheet of the application
 
-```bash
-$ npm run lint
-```
+- **ngScrollDirective**
 
+  Add the directive to the div for which the scroll indicator should track. Specify fixed height to the div and add overflow: scroll paramter to it. 
+
+  ** example css to override the default styling of progress bar **
+
+```css
+  .container {
+    background: #ccc !important;
+  }
+  .bar {
+    background: yellow !important;
+  }
+
+````
 ## License
 
 MIT © [Raghu Ram M](mailto:mraghuram3@gmail.com)
