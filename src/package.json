@@ -1,0 +1,28 @@
+{
+  "name": "ngx-scroll-indicator",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mraghuram3/ngx-scroll-indicator"
+  },
+  "author": {
+    "name": "Raghu Ram M",
+    "email": "mraghuram3@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mraghuram3/ngx-scroll-indicator/issues"
+  },
+  "main": "ngx-scroll-indicator.umd.js",
+  "module": "ngx-scroll-indicator.js",
+  "jsnext:main": "ngx-scroll-indicator.js",
+  "typings": "ngx-scroll-indicator.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
